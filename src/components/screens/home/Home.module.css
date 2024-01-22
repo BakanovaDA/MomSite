@@ -1,0 +1,95 @@
+.profile {
+    background-size: cover;
+    width: 66.6vh;
+    height: 100vh;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.fio {
+    color:rgb(246, 236, 209);
+    padding: 15px;
+    position: relative;
+}
+
+.quote {
+    color: aliceblue;
+    font-size: 25px; 
+    font-style: italic;
+    text-align: right;
+    text-decoration: none;
+    margin: 0;
+    padding: 15px;
+}
+
+.item {
+    border-radius: 30px;
+    background-color: white;
+    margin: 15px calc(66.6vh + 20px) 20px;
+    width: calc(100vw - 66.6vh - 40px);
+    opacity: 0.4;
+    color: black;
+    padding: 15px;
+    font-size: 6mm;
+}
+
+.containerButton {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px calc(66.6vh + 20px) 20px;
+    grid-column-gap: 15px;
+}
+
+
+
+.button{
+  position: relative;
+  background-color:  #FF5F6D;
+  border-radius: 4em;
+  font-size: 16px;
+  border-style: none;
+  color: black;
+  padding: 0.8em 1.8em;
+  cursor:pointer;
+  user-select:none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 2s;
+}
+
+.button:hover {
+  transition-duration: 0.1s;
+  background-color: white;
+}
+
+.button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.button:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top:0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.button:active {
+  top: 1px;
+}
