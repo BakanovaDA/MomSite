@@ -6,10 +6,10 @@ import Page3 from '../screens/page3/Page3'
 const Router = () => {
   return <BrowserRouter>
     <Routes>
-      <Route element={<Home />} path='/' />
-      <Route element={<Page2 />} path='/page2' />
-      <Route element={<Page3 />} path='/page3' />
-      <Route path='*' element={<div> Not found </div>} />
+      <Route element={<Home />} path='/MomSite/' />
+      <Route element={<Page2 />} path='/MomSite/page2' />
+      <Route element={<Page3 />} path='/MomSite/page3' />
+      <Route path='*' element={<div> Not found ! </div>} />
     </Routes>
   </BrowserRouter>
 }

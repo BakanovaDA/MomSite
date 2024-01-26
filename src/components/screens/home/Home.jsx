@@ -6,7 +6,7 @@ function App() {
     <div className={styles.container}>
       <div className={styles.profile}
         style={{
-          backgroundImage: 'url(/main.jpg)'
+          backgroundImage: 'url(/MomSite/main.jpg)'
       }}>
         <div className={styles.fio}>
           <h1>Баканова</h1>
@@ -32,12 +32,12 @@ function App() {
 
       <div className={styles.containerButton}>
         <div>
-          <Link to='/page2'>
+          <Link to='/MomSite/page2'>
             <button className={styles.button}>Педагогическая деятельность</button>
           </Link>
         </div>
         <div>
-          <Link to='/page3'>
+          <Link to='/MomSite/page3'>
             <button className={styles.button}>Достижения воспитанников</button>
           </Link>
         </div>

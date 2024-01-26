@@ -33,8 +33,8 @@ const Page2 = () => {
           <div className={styles.nav}>
             <img src='/gg.gif' alt='гифка' width='200' height='200'></img>
             <ul>
-              <li id={styles.nav1}><Link to='/'>Обо мне</Link></li>
-              <li id={styles.nav2}><Link to='/page3'>Достижения воспитанников</Link></li>
+              <li id={styles.nav1}><Link to='/MomSite/'>Обо мне</Link></li>
+              <li id={styles.nav2}><Link to='/MomSite/page3'>Достижения воспитанников</Link></li>
             </ul>
           </div>
         </div>
@@ -46,17 +46,17 @@ const Page2 = () => {
           <div className={styles.container}>
             <a href='#section1' className={styles.rect}
               style={{
-                backgroundImage: 'url(/goldenAutumn.jpg)'
+                backgroundImage: 'url(/MomSite/goldenAutumn.jpg)'
               }}/>
 
             <a href='#section2' className={styles.rect}
               style={{
-                backgroundImage: 'url(/pdd.jpg)'
+                backgroundImage: 'url(/MomSite/pdd.jpg)'
               }}/>
 
             <a href='#section3' className={styles.rect}
               style={{
-                backgroundImage: 'url(/summer.png)'
+                backgroundImage: 'url(/MomSite/summer.png)'
               }}/>
           </div>
           <div className={styles.container}>
@@ -88,43 +88,43 @@ const Page2 = () => {
             <button className={styles.btn} id={styles.prev} onClick={onPrev}>&#171;</button>
             <ul className={styles.slides}>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/1.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/1.jpg)' }}/>
               </li>
               <li className={styles.slide} data-active>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/2.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/2.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/3.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/3.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/4.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/4.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/5.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/5.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/6.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/6.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/7.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/7.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/8.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/8.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/9.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/9.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/10.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/10.jpg)' }}/>
               </li>
               <li className={styles.slide}>
-                <div className={styles.img} style={{ backgroundImage: 'url(/autumn/11.jpg)' }}/>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/autumn/11.jpg)' }}/>
               </li>
             </ul>
           </div>
 
-          <a className={styles.icon} href="/autumn/autumn.pdf" download>
-            <img src="/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
+          <a className={styles.icon} href="/MomSite/autumn/autumn.pdf" download>
+            <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
             Конспект "Осення ярмарка".pdf
           </a> 
 
@@ -140,20 +140,20 @@ const Page2 = () => {
             </div>
           {/* </ScrollableAnchor> */}
 
-          <a className={styles.icon} href="/pdd/Всеобуч ПДД.pdf" download>
-            <img src="/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
+          <a className={styles.icon} href="/MomSite/pdd/Всеобуч ПДД.pdf" download>
+            <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
             Всеобуч ПДД.pdf
           </a>
           <p></p>
-          <a className={styles.icon} href="/pdd/pddSound.jpg" download>
-            <img src="/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
+          <a className={styles.icon} href="/MomSite/pdd/pddSound.jpg" download>
+            <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
             Песенка про ПДД.svg
           </a>
 
           <div className={styles.pdd}>
 
           <video width="640" height="480" controls>
-            <source src='/video/pdd.mp4' type="video/mp4"></source>
+            <source src='/MomSite/video/pdd.mp4' type="video/mp4"></source>
           </video>
           
           </div>
