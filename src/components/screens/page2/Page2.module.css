@@ -64,6 +64,17 @@
   opacity: 1;
 }
 
+.slide2 {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  transition: 300ms opacity ease-in-out;
+}
+
+.slide2[data-active] {
+  opacity: 1;
+}
+
 .btn {
   position: absolute;
   font-size: 4rem;
@@ -95,6 +106,10 @@
   margin: 0px 20px;
   padding: 20px 20px;
   vertical-align: auto;
+}
+
+.video {
+  margin: 25px;
 }
 
 .info {

@@ -4,16 +4,18 @@ import { Link } from 'react-router-dom'
 function App() {
   return (
     <div className={styles.container}>
-      <div className={styles.profile}
-        style={{
-          backgroundImage: 'url(/MomSite/main.jpg)'
-      }}>
+
+      <div className={styles.profile}>
         <div className={styles.fio}>
           <h1>Баканова</h1>
           <h2>Любовь Михайловна</h2>
         </div>
+        <img width='100px' height='100px' src='heart/3.jpg' alt='сердечко'></img>
         
       </div>
+
+     
+      
       <div className={styles.item}>
         <p>Я воспитатель высшей категории детского сада №37 г. Оренбурга.
           <p>За 20 лет опыта работы у меня накопилось большое количество 
@@ -30,6 +32,8 @@ function App() {
         &#10077; Дети - это маленькие взрослые. &#10078;
       </blockquote>
 
+      
+
       <div className={styles.containerButton}>
         <div>
           <Link to='/MomSite/page2'>
@@ -39,10 +43,9 @@ function App() {
         <div>
           <Link to='/MomSite/page3'>
             <button className={styles.button}>Достижения воспитанников</button>
-          </Link>
+          </Link> 
         </div>
       </div>
-      
 
     </div>
   )

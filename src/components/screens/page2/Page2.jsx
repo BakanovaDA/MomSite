@@ -3,6 +3,27 @@ import { Link } from 'react-router-dom'
 
 const Page2 = () => {
 
+  const handleImageChange2 = (offset) => {
+    const activeSlide = document.querySelector('[data-active]')
+    //const slides = [...document.querySelectorAll('ul > li')].slice(2)
+    //const slides = [...document.getElementsByClassName('_slide_edumf_111')]
+    const slides = [...document.getElementsByClassName(`${styles.slide2}`)]
+
+    const currentIndex = slides.indexOf(activeSlide)
+
+    let newIndex = currentIndex + offset
+  
+    if (newIndex < 0) newIndex = slides.length - 1
+    if (newIndex >= slides.length) newIndex = 0
+  
+    slides[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  }
+  
+  const onNext2 = () => handleImageChange2(1)
+  
+  const onPrev2 = () => handleImageChange2(-1)
+
   const handleImageChange = (offset) => {
     const activeSlide = document.querySelector('[data-active]')
     //const slides = [...document.querySelectorAll('ul > li')].slice(2)
@@ -139,6 +160,28 @@ const Page2 = () => {
               <div style={{flex: 1, height: '1px', backgroundColor: 'brown'}} />
             </div>
           {/* </ScrollableAnchor> */}
+
+          <p>Провели всеобуч для родителей 25 января 2024 "Безопасность детей"</p>
+
+          <div className={styles.carousel}>
+            <button className={styles.btn} id={styles.next} onClick={onNext2}>&#187;</button>
+            <button className={styles.btn} id={styles.prev} onClick={onPrev2}>&#171;</button>
+            <ul className={styles.slides}>
+              <li className={styles.slide2} data-active>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/1.jpg)' }}/>
+              </li>
+              <li className={styles.slide2}>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/2.jpeg)' }}/>
+              </li>
+              <li className={styles.slide2}>
+                <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/3.jpeg)' }}/>
+              </li>
+            </ul>
+          </div>
+
+          <video className={styles.video} width="640" height="480" controls>
+            <source src='/MomSite/pdd/video.mp4' type="video/mp4"></source>
+          </video>
 
           <a className={styles.icon} href="/MomSite/pdd/Всеобуч ПДД.pdf" download>
             <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
