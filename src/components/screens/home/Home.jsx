@@ -10,12 +10,8 @@ function App() {
           <h1>Баканова</h1>
           <h2>Любовь Михайловна</h2>
         </div>
-        <img width='100px' height='100px' src='heart/3.jpg' alt='сердечко'></img>
-        
       </div>
 
-     
-      
       <div className={styles.item}>
         <p>Я воспитатель высшей категории детского сада №37 г. Оренбурга.
           <p>За 20 лет опыта работы у меня накопилось большое количество 
@@ -23,9 +19,6 @@ function App() {
             Надеюсь, здесь найдется много интересного как для коллег, так и для родителей.
           </p>
         </p>
-        
-        
-
       </div>
 
       <blockquote className={styles.quote}>
@@ -46,6 +39,8 @@ function App() {
           </Link> 
         </div>
       </div>
+
+      <img className={styles.img} src='heart/31.png' alt='сердечко'></img>
 
     </div>
   )

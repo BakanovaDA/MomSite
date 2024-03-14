@@ -22,12 +22,13 @@
     text-decoration: none;
     margin: 0;
     padding: 15px;
+    margin: 15px;
 }
 
 .item {
     border-radius: 30px;
     background-color: white;
-    margin: 15px calc(66.6vh + 20px) 20px;
+    margin: 15px calc(66.6vh + 20px) 15px;
     width: calc(100vw - 66.6vh - 40px);
     opacity: 0.4;
     color: black;
@@ -38,7 +39,7 @@
 .containerButton {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 15px calc(66.6vh + 20px) 20px;
+    margin: 0px calc(66.6vh + 20px);
     grid-column-gap: 15px;
 }
 
@@ -95,6 +96,14 @@
   top: 1px;
 }
 
+.img {
+  margin: 15px;
+  width: 50vh;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
 
 
 @media (min-width: 1200px) {
@@ -109,11 +118,7 @@
   
 }
 
-@media (min-width: 480px) {
-  
-}
-
-@media (max-width: 320px) {
+@media (max-width: 480px) {
 
   * {
     background: white;
@@ -129,6 +134,9 @@
   .fio {
     margin-top: 150px;
     color:black;
+  }
+  .img {
+    width: 35vh;
   }
   
 }

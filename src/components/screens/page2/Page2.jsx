@@ -5,8 +5,6 @@ const Page2 = () => {
 
   const handleImageChange2 = (offset) => {
     const activeSlide = document.querySelector('[data-active]')
-    //const slides = [...document.querySelectorAll('ul > li')].slice(2)
-    //const slides = [...document.getElementsByClassName('_slide_edumf_111')]
     const slides = [...document.getElementsByClassName(`${styles.slide2}`)]
 
     const currentIndex = slides.indexOf(activeSlide)
@@ -26,8 +24,6 @@ const Page2 = () => {
 
   const handleImageChange = (offset) => {
     const activeSlide = document.querySelector('[data-active]')
-    //const slides = [...document.querySelectorAll('ul > li')].slice(2)
-    //const slides = [...document.getElementsByClassName('_slide_edumf_111')]
     const slides = [...document.getElementsByClassName(`${styles.slide}`)]
 
     const currentIndex = slides.indexOf(activeSlide)
