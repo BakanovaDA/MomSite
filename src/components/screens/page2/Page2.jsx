@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 
 const Page2 = () => {
 
-  const handleImageChange2 = (offset) => {
+  const handleImageChange = (offset, slide) => {
     const activeSlide = document.querySelector('[data-active]')
-    const slides = [...document.getElementsByClassName(`${styles.slide2}`)]
+    const slides = [...document.getElementsByClassName(`${slide}`)]
+
+    document.query
 
     const currentIndex = slides.indexOf(activeSlide)
 
@@ -17,36 +19,29 @@ const Page2 = () => {
     slides[newIndex].dataset.active = true
     delete activeSlide.dataset.active
   }
-  
-  const onNext2 = () => handleImageChange2(1)
-  
-  const onPrev2 = () => handleImageChange2(-1)
 
-  const handleImageChange = (offset) => {
-    const activeSlide = document.querySelector('[data-active]')
-    const slides = [...document.getElementsByClassName(`${styles.slide}`)]
+  // const onNext = (slide) => handleImageChange(1, slide)
+  // const onPrev = (slide) => handleImageChange(-1, slide)
 
-    const currentIndex = slides.indexOf(activeSlide)
+  const onNext = () => handleImageChange(1, styles.slide)
+  const onPrev = () => handleImageChange(-1, styles.slide)
+  
 
-    let newIndex = currentIndex + offset
-  
-    if (newIndex < 0) newIndex = slides.length - 1
-    if (newIndex >= slides.length) newIndex = 0
-  
-    slides[newIndex].dataset.active = true
-    delete activeSlide.dataset.active
-  }
-  
-  const onNext = () => handleImageChange(1)
-  
-  const onPrev = () => handleImageChange(-1)
+  setTimeout(function timeout() {
+    console.log('1');
+  }, 0);
+
+  Promise.resolve('2').then(console.log );
+
+  console.log('3');
 
 
   
     
     return (
-      <div className='row'>
-        <div className='col-3'>
+      <div className={styles.container}>
+        <div className='row'>
+        <div className='col-4'>
           <div className={styles.nav}>
             <img src='/gg.gif' alt='гифка' width='200' height='200'></img>
             <ul>
@@ -56,7 +51,7 @@ const Page2 = () => {
           </div>
         </div>
 
-        <div className='col-6'>
+        <div className='col-5'>
           <div className={styles.actual}>
             <h4>Актуальные</h4>
           </div>
@@ -160,8 +155,8 @@ const Page2 = () => {
           <p>Провели всеобуч для родителей 25 января 2024 "Безопасность детей"</p>
 
           <div className={styles.carousel}>
-            <button className={styles.btn} id={styles.next} onClick={onNext2}>&#187;</button>
-            <button className={styles.btn} id={styles.prev} onClick={onPrev2}>&#171;</button>
+            <button className={styles.btn} id={styles.next} onClick={onNext}>&#187;</button>
+            <button className={styles.btn} id={styles.prev} onClick={onPrev}>&#171;</button>
             <ul className={styles.slides}>
               <li className={styles.slide2} data-active>
                 <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/1.jpg)' }}/>
@@ -178,11 +173,13 @@ const Page2 = () => {
           <video className={styles.video} width="640" height="480" controls>
             <source src='/MomSite/pdd/video.mp4' type="video/mp4"></source>
           </video>
-
+          <p></p>
+          <p></p>
           <a className={styles.icon} href="/MomSite/pdd/Всеобуч ПДД.pdf" download>
             <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
             Всеобуч ПДД.pdf
           </a>
+          <p></p>
           <p></p>
           <a className={styles.icon} href="/MomSite/pdd/pddSound.jpg" download>
             <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
@@ -194,15 +191,36 @@ const Page2 = () => {
           <video width="640" height="480" controls>
             <source src='/MomSite/video/pdd.mp4' type="video/mp4"></source>
           </video>
+          <p>Всеобуч ПДД</p>
+
+          <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '20px'}}>
+            <div style={{flex:1, height: '1px', backgroundColor: 'brown'}} />
+
+            <div>
+              <p style={{width: '75px', textAlign: 'center', color: 'brown'}}>Школьный звонок</p>
+            </div>
+
+            <div style={{flex: 1, height: '1px', backgroundColor: 'brown'}} />
+          </div>
+
+
+          <a className={styles.icon} href="/MomSite/Всеобуч Школьный звонок.pdf" download>
+            <img src="/MomSite/icons/download.svg" alt="download" width="32" height="32" style={{margin: '20px'}}></img>
+            Всеобуч Школьный звонок.pdf
+          </a>
+
           
           </div>
+
+
+
 
           {/* <ScrollableAnchor id={'section3'}> */}
             <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '20px'}}>
               <div style={{flex:1, height: '1px', backgroundColor: 'brown'}} />
 
               <div>
-                <p style={{width: '150px', textAlign: 'center', color: 'brown'}}>Вкусное лето</p>
+                <p style={{width: '150px', textAlign: 'center', color: 'brown'}}></p>
               </div>
 
               <div style={{flex: 1, height: '1px', backgroundColor: 'brown'}} />
@@ -216,6 +234,8 @@ const Page2 = () => {
 
           </div>
         </div>
+      </div>
+
       </div>
     )
 }

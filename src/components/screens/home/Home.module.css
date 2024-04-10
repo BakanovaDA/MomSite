@@ -1,3 +1,7 @@
+.container {
+  /* background-color: #FFC0CB; */
+}
+
 .profile {
     background-image: url('/MomSite/main.jpg');
     background-size: cover;
@@ -10,8 +14,7 @@
 
 .fio {
     color:rgb(246, 236, 209);
-    padding: 15px;
-    /* position: relative; */
+    margin: 15px 0 0 15px;
 }
 
 .quote {
@@ -122,7 +125,6 @@
 
   * {
     background: white;
-    color: black;
   }
   .profile {
     background-image: url('/MomSite/mainMini.jpg');
@@ -132,11 +134,27 @@
     margin: 20px;
   }
   .fio {
-    margin-top: 150px;
+    margin: 165px 0 0 0;
     color:black;
   }
   .img {
-    width: 35vh;
+    width: 20vh;
+  }
+  .item {
+
+    font-size: 16px; 
+
+    border-radius: 30px;
+    background-color: none;
+    margin: 15px calc(66.6vh + 20px) 15px;
+    width: calc(100vw - 66.6vh - 40px);
+    opacity: 1;
+    color:#FF5F6D;
+    padding: 15px;
+    font-size: 6mm;
+
+
+    
   }
   
 }
