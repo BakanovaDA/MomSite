@@ -1,5 +1,5 @@
 .body {
-  background-color: rgba(228,113,122,0.3);
+  background-color: rgba(218,112,214,0.3);
   font: 14px/1.5em "Lucida Grande",Arial,sans-serif;
 }
 
@@ -17,25 +17,39 @@
   bottom: 0;
 }
 .nav a {
-  color: rgba(228,113,122);
+  color: rgba(218,112,214);
 }
 
 .public {
   width: 800px;
   text-align:right;
   margin: 15px 0px 20px 0px;
-  color: rgb(228,113,122);
+  color: rgb(218,112,214);
 }
-
-.diplom {
-  width: 800px;
+.post {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color:  rgba(255,255,255,0.4);
+  line-height: 15px;
+  padding: 20px;
+  color: black;
+  width: 800px; /* calc(vw / 2); */
+  box-shadow: 10px 10px 20px 0px  rgba(218,112,214,0.3);
   text-align: center;
 }
 
-.diplom img {
-  max-width: 800px;
-  max-height: 40vw;
-  margin-bottom: 15px;
+.post img {
+  background-size: cover;
+  border-radius: 15px;
+  max-width: 750px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+video {
+  width: 640px;
+  height: 480px;
+  margin: 0px 60px 0px 60px;
 }
 
 .carousel {
@@ -80,4 +94,30 @@
 }
 #prev {
   margin: 225px -305px;
+}
+
+.icon {
+  width: fit-content;
+  margin:auto;
+  padding-top: 20px;
+}
+.icon img {
+  width: 20px;
+  height: 20px;
+  border-radius: 0px;
+  position: absolute;
+}
+.icon p {
+  margin-left: 40px;
+}
+
+.info p {
+  text-align:right;
+  color: rgb(34, 146, 105);
+  line-height: 15px;
+  text-align: center;
+  margin: 20px 15px 25px 0px;
+}
+.info li {
+
 }

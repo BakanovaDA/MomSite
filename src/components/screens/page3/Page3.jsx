@@ -1,38 +1,48 @@
 import styles from './Page3.module.css'
 import { Link } from 'react-router-dom'
-import 'chart.js'
 
 const Page3 = () => {
 
-  const pieChartData = {
-    labels: ["дети с высоким уровнем %32", "дети с низким уровнем %32", "дети со средним уровнем %36"],
-    datasets: [{
-        data: [32, 32, 36],
-        label: "Диагностика по разделу 'РАЗВИТИЕ РЕЧИ' старшей группы 5-6 лет",
-        backgroundColor: ["#2FDE00", "#00A6B4", "#ff6600"],
-        hoverBackgroundColor: ["#175000", "#003350", "#993d00"]
-    }]
-  }
-
-
   return (
-    <div className='row'>
-      <div className='col-3'>
-        <div className={styles.nav}>
-          <img src='/gg.gif' alt='гифка' width='200' height='200'></img>
-          <ul>
-            <li id={styles.nav1}><Link to='/MomSite/'>Обо мне</Link></li>
-            <li id={styles.nav2}><Link to='/MomSite/page2'>Методическая деятельность</Link></li>
-          </ul>
+    <div className={styles.body}>
+    <div className={styles.container}>
+      <div className='row'>
+        <div className='col-md-1'></div>
+        <div className='col-md-2'>
+          <div className={styles.nav}>
+            <ul>
+              <li><Link to='/MomSite/'>Обо мне</Link></li>
+              <li><Link to='/MomSite/page2'>Мои достижения</Link></li>
+              <li><Link to='/MomSite/page3'>Достижения воспитанников</Link></li>
+              <li><Link to='/MomSite/page4'>Педагогическая деятельность</Link></li>
+              <li><Link to='/MomSite/page5'>Общественная деятельность</Link></li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div className='col-9'>
-        <div className={styles.actual}>
-          <h1>Диаграмма</h1>
-          <canvas id={styles.pie} width="600" height="400">Ghbd</canvas>
+        <div className='col-md-7'>
+
+          <div className={styles.public}>
+            <h5>Публикации</h5>
+          </div>
+          
+          <div className={styles.diplom}>
+            <img src="/MomSite/childrenDiplomas/dip1.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip2.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip3.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip4.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip5.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip6.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip7.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip8.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip9.jpg" alt="img"></img>
+            <img src="/MomSite/childrenDiplomas/dip10.jpg" alt="img"></img>
+          </div>
         </div>
+
+        <div className='col-md-2'></div>
       </div>
+    </div>
     </div>
   )
 }

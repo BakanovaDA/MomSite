@@ -1,0 +1,12 @@
+/* .top_menu {
+  position:fixed;
+  text-align: center;
+}
+.top_menu a {
+  color: aliceblue;
+  font-size: 14px;
+}
+.top_menu li {
+  display: inline-block;
+  padding: 10px;
+} */

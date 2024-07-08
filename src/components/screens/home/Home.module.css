@@ -1,49 +1,49 @@
 .container {
-  /* background-color: #FFC0CB; */
+  background-color: white;
 }
 
 .profile {
-    background-image: url('/MomSite/main.jpg');
-    background-size: cover;
-    position: absolute;
-    width: 66.6vh;
-    height: 100vh;
-    top:0px;
-    left:0px;
+  background-image: url('/MomSite/main.jpg');
+  background-size: cover;
+  position: absolute;
+  width: 66.6vh;
+  height: 100vh;
+  top:0px;
+  left:0px;
 }
 
 .fio {
-    color:rgb(246, 236, 209);
-    margin: 15px 0 0 15px;
+  color:rgb(246, 236, 209);
+  margin: 15px 0 0 15px;
 }
 
 .quote {
-    color: aliceblue;
-    font-size: 25px; 
-    font-style: italic;
-    text-align: right;
-    text-decoration: none;
-    margin: 0;
-    padding: 15px;
-    margin: 15px;
+  color: aliceblue;
+  font-size: 25px; 
+  font-style: italic;
+  text-align: right;
+  text-decoration: none;
+  margin: 0;
+  padding: 15px;
+  margin: 15px;
 }
 
 .item {
-    border-radius: 30px;
-    background-color: white;
-    margin: 15px calc(66.6vh + 20px) 15px;
-    width: calc(100vw - 66.6vh - 40px);
-    opacity: 0.4;
-    color: black;
-    padding: 15px;
-    font-size: 6mm;
+  border-radius: 30px;
+  background-color: white;
+  margin: 15px calc(66.6vh + 20px) 15px;
+  width: calc(100vw - 66.6vh - 40px);
+  opacity: 0.4;
+  color: black;
+  padding: 15px;
+  font-size: 6mm;
 }
 
 .containerButton {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0px calc(66.6vh + 20px);
-    grid-column-gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0px calc(66.6vh + 20px);
+  grid-column-gap: 15px;
 }
 
 
