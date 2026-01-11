@@ -1,0 +1,14 @@
+.icon {
+  width: fit-content;
+  text-align: left;
+  margin: auto;
+  padding-top: 20px;
+}
+.icon img {
+  width:  20;
+  height: 20;
+  position: absolute;
+}   
+.icon p {
+  margin-left: 30px;
+}

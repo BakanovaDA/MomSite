@@ -1,0 +1,31 @@
+:root {
+  /* Основные цвета */
+  --primary-color: 255, 255, 255;
+  --default-opacity: 0.3;
+
+  /* Нежные пастельные оттенки */
+  --achievements-color: 179, 229, 252;  /* нежно-голубой */
+  --pedagogy-color: 225, 190, 231;      /* нежно-лавандовый */
+  --methodology-color: 178, 223, 219;   /* нежно-мятный */
+  --social-color: 255, 204, 188;        /* нежно-персиковый */
+  
+  /* Цвета для конкретных страниц */
+  --home-bg-color: rgba(var(--primary-color), var(--default-opacity));
+  --achievements-bg-color: rgba(255, 193, 7, 0.3); /* желтый */
+  /* Достижения */
+  --achievements-bg-color: rgba(var(--achievements-color), var(--default-opacity));
+  --achievements-text-color: rgba(var(--achievements-color));
+  --achievements-shadow-color: rgba(var(--achievements-color), var(--default-opacity));
+  /* Педагогическая деятельность */
+  --pedagogy-bg-color: rgba(var(--pedagogy-color), var(--default-opacity));
+  --pedagogy-text-color: rgba(var(--pedagogy-color));
+  --pedagogy-shadow-color: rgba(var(--pedagogy-color), var(--default-opacity));
+  /* Методическая деятельность */
+  --methodology-bg-color: rgba(var(--methodology-color), var(--default-opacity));
+  --methodology-text-color: rgba(var(--methodology-color));
+  --methodology-shadow-color: rgba(var(--methodology-color), var(--default-opacity));
+  /* Общественная деятельность */
+  --social-bg-color: rgba(var(--social-color), var(--default-opacity));
+  --social-text-color: rgba(var(--social-color));
+  --social-shadow-color: rgba(var(--social-color), var(--default-opacity));
+}

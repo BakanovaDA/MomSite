@@ -1,0 +1,21 @@
+
+body {  
+  /* max-width: 1920px; */
+  /* margin: auto; */
+  font: 14px/1.5em "Lucida Grande",Arial,sans-serif;
+}
+
+* {
+  /* margin:0; */
+  /* padding:0; */
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

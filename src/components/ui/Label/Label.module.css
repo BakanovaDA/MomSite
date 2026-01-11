@@ -1,0 +1,5 @@
+.label {
+  text-align: right;
+  color: var(--text-color);
+  margin: 15px 0px;
+}

@@ -1,0 +1,83 @@
+
+/* Правая колонка */
+.rightColumn {
+  min-height: 100vh;
+  height: 100%;
+  padding: 30px 20px;
+  /* padding: 30px 50px; */
+  position: relative;
+}
+
+/* Навигация по странице */
+.info {
+  position: sticky;
+    top: 30px;
+}
+
+.info p {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--text-color);
+}
+
+.info li {
+  margin-bottom: 12px;
+}
+
+.info a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #5a6c7d;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  line-height: 1.4;
+  border-left: 3px solid transparent;
+}
+
+.info a:hover {
+  background: white;
+  color: var(--text-color);
+  border-left-color: var(--text-color);
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
+}
+/* 
+.info a:active {
+  background: var(--text-color);
+} */
+
+/* Декоративный элемент для правой колонки */
+.rightColumn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  opacity: 0.1;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .rightColumn {
+    min-height: auto;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
+    margin-top: 30px;
+    padding: 25px 20px;
+  }
+  
+  .info {
+    position: static;
+  }
+}
+
+/* Плавная прокрутка */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}

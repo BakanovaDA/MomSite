@@ -1,0 +1,104 @@
+.scene {
+  perspective: 1000px;
+  perspective-origin: center -5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cube p {
+  font-size: 13px;
+  text-align: center;
+}
+
+.cube__face,
+.cube {
+  width: 10em;
+  height: 10em;
+  font-size: 10.5px;
+}
+
+.cube {
+  transform-style: preserve-3d;
+}
+
+.cube__face {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1px solid white;
+	color: white;
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  padding: 5px;
+}
+
+.front {
+  transform: translateZ(5em);
+}
+.back {
+  transform: translateZ(-5em);
+}
+.left {
+  transform: translateX(-5em) rotateY(90deg);
+}
+.right {
+  transform: translateX(5em) rotateY(90deg);
+}
+.top {
+  transform: translateY(5em) translateZ(0em) rotateX(90deg);
+}
+.bottom {
+  transform: translateY(-5em) translateZ(0em) rotateX(90deg);
+}
+
+
+
+/* Активный куб - красный */
+.cubeActive .cube__face {
+  background-color: rgba(var(--cube-color));
+  /* border: 0.5px solid #ffffff; */
+  
+}
+
+.cubeActive .cube__face.front {
+  background-color: #ff4444;
+  /* border: 0.5px solid #ffffff; */
+}
+
+/* Неактивный куб - белый */
+/* .cube:not(.cubeActive) .cube__face {
+  background-color: #ffffff;
+  border: 2px solid #dddddd;
+  color: #dddddd;
+} */
+
+
+
+.cube:not(.cubeActive) .cube__face {
+  background: linear-gradient(135deg, #c5cae9, #9fa8da);
+  background: linear-gradient(135deg, #ebeaea, #efefef);
+  background: linear-gradient(135deg, #f3f2f1, #fcfcfc);
+  /* background: linear-gradient(135deg, #c5cae9, #eceffe); */
+
+
+  border: 1px solid rgba(138, 131, 131, 0.5);
+}
+
+.cube:not(.cubeActive) .cube__face.front p {
+  color: #64748b;
+}
+
+.cubeActive .cube__face {
+  background: linear-gradient(135deg, #ff6b6b, #ff4444);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+}
+
+.cubeActive .cube__face.front {
+  background: linear-gradient(135deg, #ff6b6b, #ff4444);
+  box-shadow: 
+    0 4px 20px rgba(255, 68, 68, 0.4),
+    inset 0 0 10px rgba(254, 255, 255, 0.2);
+}
