@@ -1,33 +1,27 @@
 import React, { useState, useEffect } from 'react'
 
 const ChildrenAchievsTab = () => {
-  
   const [images, setImages] = useState([])
   
   useEffect(() => {
-    fetch('http://23.134.216.180:5000/api/files/children-achievs')
+    fetch(`${_API_}/children-achievs`)
       .then(res => res.json())
       .then(data => {
-        console.log('Полученные данные:', data)
-        console.log('Имена файлов:', data.files?.map(f => f.name))
         setImages(data.files?.map(f => f.name) || [])
       })
+      .catch(error => console.error('Ошибка загрузки:', error))
   }, [])
-  
-  const SERVER = 'http://23.134.216.180:5000/api/files/children-achievs'
   
   return (
     <div>
-      {images.map((filename, index) => {
-        console.log('Рендерим изображение:', `${SERVER}/${filename}`)
-        return (
-          <img 
-            key={index}
-            src={`${SERVER}/${filename}`}
-            alt="Достижение"
-          />
-        )
-      })}
+      {images.map((filename, index) => (
+        <img 
+          key={index}
+          src={`${_API_}/children-achievs/${filename}`}
+          alt="Достижение"
+          loading="lazy"  // ← ленивая загрузка для оптимизации
+        />
+      ))}
       
       {images.length === 0 && (
         <div>Нет изображений для отображения</div>
@@ -37,26 +31,3 @@ const ChildrenAchievsTab = () => {
 }
 
 export default ChildrenAchievsTab
-
-// const ChildrenAchievsTab = () => {
-
-//   return (
-
-//     <div>
-
-//       <img src="/MomSite/childrenAchievs/dip11.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip10.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip9.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip8.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip7.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip6.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip5.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip4.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip3.jpg" alt="img"></img>
-//       <img src="/MomSite/childrenAchievs/dip2.jpg" alt= "img"></img>
-//       <img src="/MomSite/childrenAchievs/dip1.jpg" alt="img"></img>
-//     </div>
-//   )
-// }
-
-// export default ChildrenAchievsTab

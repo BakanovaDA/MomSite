@@ -14,19 +14,23 @@ const Post = ({
   bucket='moms-files'
 }) => {
 
-  const SERVER_URL = 'http://23.134.216.180:5000';
-
   const getMinioUrl = (filename) => {
-    return `${SERVER_URL}/api/files/${bucket}/${filename}`;
+    return `${_API_}/${bucket}/${filename}`;
   };
   
   return (
     <div id={id} className={styles.post}>
       <h5>{title}</h5>
       <p>{date}</p>
-      <p>{description}</p>
 
-      {image && <img src={getMinioUrl(image)} alt="img"></img>}
+      {description && (
+        <div 
+          className={styles.description}
+          dangerouslySetInnerHTML={{ __html: description }} 
+        />
+      )}
+
+      {image && <img src={getMinioUrl(image)} alt="img" loading="lazy"></img>}
 
       {images && <Carousel images={images.map(img => getMinioUrl(img))}/>}
 

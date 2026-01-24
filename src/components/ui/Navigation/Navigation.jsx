@@ -14,7 +14,7 @@ const Navigation = () => {
     { path: '/MomSite/', title: 'Обо мне', rotate: 'left' },
     { path: '/MomSite/Achievs', title: 'Достижения', rotate: 'right' },
     { path: '/MomSite/pedagogy', title: 'Педагогическая деятельность', rotate: 'left' },
-    { path: '/MomSite/methodology', title: 'Методическая деятельность', rotate: 'right' },
+    { path: '/MomSite/methodology', title: 'Обмен опытом', rotate: 'right' },
     { path: '/MomSite/social', title: 'Общественная деятельность', rotate: 'left' },
     { path: '/MomSite/creative', title: 'Творческий план работ', rotate: 'right' }
   ];

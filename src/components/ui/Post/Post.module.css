@@ -5,10 +5,11 @@
   padding: 20px;
   box-shadow: 10px 10px 20px 0px  var(--shadow-color);
   text-align: center;
+  font:15px;
 }
 .post > img {
   border-radius: 15px;
-  max-width: calc(47vw);
+  max-width: calc(100%);
   margin: auto;
   margin-top: 15px;
 }
@@ -16,4 +17,13 @@
 video {
   width: 640px;
   height: 480px;
+}
+
+.description {
+  text-align: left;
+  padding: 0px 20px 0px 20px;   
+}
+
+.description a {
+  color: #3498db;
 }
