@@ -5,7 +5,7 @@ const MyAchievsTab = () => {
   const [images, setImages] = useState([])
   
   useEffect(() => {
-    fetch('http://localhost:5000/api/files/my-achievs')
+    fetch('http://23.134.216.180:5000/api/files/my-achievs')
       .then(res => res.json())
       .then(data => {
         console.log('Полученные данные:', data)
@@ -14,7 +14,7 @@ const MyAchievsTab = () => {
       })
   }, [])
   
-  const SERVER = 'http://localhost:5000/api/files/my-achievs'
+  const SERVER = 'http://23.134.216.180:5000/api/files/my-achievs'
   
   return (
     <div>

@@ -14,7 +14,7 @@ const Post = ({
   bucket='moms-files'
 }) => {
 
-  const SERVER_URL = 'http://localhost:5000';
+  const SERVER_URL = 'http://23.134.216.180:5000';
 
   const getMinioUrl = (filename) => {
     return `${SERVER_URL}/api/files/${bucket}/${filename}`;
