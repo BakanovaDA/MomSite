@@ -43,13 +43,7 @@ function App() {
 
   return (
 
-    <div className={styles.body} 
-        style={{
-          /* Очень светлый розово-красный */
-          // backgroundСolor: 'rgba(255, 200, 200, 0.3)'
-          /* Очень мягкий розовый */
-          // backgroundColor: 'rgba(255, 218, 218, 0.3)'
-          }}>
+    <div className={styles.body}>
 
       {/* Мобильное меню (только для маленьких экранов) */}
       <div className='d-block d-md-none'>
