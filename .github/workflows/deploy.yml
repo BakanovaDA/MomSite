@@ -17,7 +17,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd /path/to/your/app  # Путь к приложению на сервере
+          cd /root/server/MomSite
           docker-compose down
           git pull origin main
           docker-compose build --no-cache
