@@ -1,3 +1,3 @@
 # Сайт-визитка для воспитателя детского сада
 
-URL: https://BakanovaDA.github.io/MomSite/
+URL: http://23.134.216.180:3000/MomSite/
