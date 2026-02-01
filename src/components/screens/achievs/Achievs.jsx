@@ -35,7 +35,7 @@ const Achievs = () => {
           <Navigation />
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-6 p-0'>
           <Label />
           
           {/* Передаем вкладки в компонент */}
