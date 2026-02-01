@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-const MyAchievsTab = () => {
+const GaleryTab = () => {
   const [images, setImages] = useState([])
   
   useEffect(() => {
-    fetch(`${_API_}/my-achievs`)
+    fetch(`${_API_}/galery`)
       .then(res => res.json())
       .then(data => {
         setImages(data.files?.map(f => f.name) || [])
@@ -17,8 +17,8 @@ const MyAchievsTab = () => {
       {images.map((filename, index) => (
         <img 
           key={index}
-          src={`${_API_}/my-achievs/${filename}`}
-          alt="Достижение"
+          src={`${_API_}/galery/${filename}`}
+          alt="Фото"
           loading="lazy"  // ← ленивая загрузка для оптимизации
           style={{ maxWidth: '50vw' }}
         />
@@ -31,4 +31,4 @@ const MyAchievsTab = () => {
   )
 }
 
-export default MyAchievsTab
+export default GaleryTab

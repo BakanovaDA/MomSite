@@ -26,6 +26,7 @@ const Pedagogy = () => {
         style={{
           backgroundColor: 'var(--pedagogy-bg-color)',
           '--text-color': 'var(--pedagogy-text-color)',
+          '--dark-color': 'var(--pedagogy-dark-color)',
           '--shadow-color': 'var(--pedagogy-shadow-color)'
          }}>
     
@@ -35,7 +36,7 @@ const Pedagogy = () => {
           <Navigation />
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-6 p-0'>
           <Label />
 
           {/* Передаем вкладки в компонент */}

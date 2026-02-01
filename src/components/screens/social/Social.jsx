@@ -1,16 +1,32 @@
 import styles from './Social.module.css'
 import Navigation from '../../ui/Navigation/Navigation'
 import RightInfo from '../../ui/RightInfo/RightInfo'
-import Post from '../../ui/Post/Post'
 import Label from '../../ui/Label/Label'
+import TabSwitch from '../../ui/TabSwitch/TabSwitch'
+import ContestsTab from './tabs/ContestsTab.jsx'
+import GaleryTab from './tabs/GaleryTab.jsx'
 
 const Social = () => {
+
+  // Определяем вкладки с метками и контентом
+  const tabs = {
+    сontests: {
+      label: 'Конкурсное движение',
+      content: <ContestsTab />
+    },
+    galery: {
+      label: 'Галерея', 
+      content: <GaleryTab />
+    }
+  }
+
 
   return (
     <div className={styles.body} 
         style={{
           backgroundColor: 'var(--social-bg-color)',
           '--text-color': 'var(--social-text-color)',
+          '--dark-color': 'var(--social-dark-color)',
           '--shadow-color': 'var(--social-shadow-color)'
          }}>
 
@@ -20,55 +36,13 @@ const Social = () => {
           <Navigation />
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-6 p-0'>
           <Label />
-
-          <Post id = 'post7'
-            title='Профсоюзный конкурс "Виват, таланты"'
-            date='апрель 2025'
-            image='Виват, таланты.jpg'
-            bucket='social'
-          />
-
-          <Post id = 'post6'
-            title='Благотворительная акция "Своих не бросаем"'
-            date='10 февраля 2024'
-            image='Своих не бросаем.jpg'
-            bucket='social'
-          />
-
-          <Post id = 'post5'
-            title='Вокально-инструментальная композиция "Маков цвет"'
-            date='2 ноября 2022'
-            image='Маков цвет.jpg'
-            video='Маков цвет.mp4'
-            bucket='social'
-          />
-
-          <Post id = 'post4'
-            title='Песня "Хотят ли русские войны"'
-            image='Хотят ли русские войны.jpg'
-            video='хотят ли русские войны.mp4'
-            bucket='social'
-          />
-
-          <Post id = 'post3'
-            title='Музыкальная композиция "С профсоюзом мы друзья"'
-            image='С профсоюзом мы друзья.jpg'
-            bucket='social'
-          />
-
-          <Post id = 'post2'
-            title='Песня "Душечка моя"'
-            image='Душечка моя.jpg'
-            bucket='social'
-          />
-
-          <Post id = 'post1'
-            title='Казачья песня "Ой, Дуся, ой, Маруся"'
-            image='Ой, Дуся, ой, Маруся.jpg'
-            video='Дуся-Маруся песня.mp4'
-            bucket='social'
+          
+          {/* Передаем вкладки в компонент */}
+          <TabSwitch 
+            tabs={tabs}
+            defaultTab="сontests"
           />
 
         </div>
@@ -76,7 +50,6 @@ const Social = () => {
         <div className='col-md-3'>
           <RightInfo />
         </div>
-
       </div>
     </div>
   )

@@ -21,8 +21,8 @@
 }
 
 .tab.active {
-  color: #2196f3;
-  border-bottom-color: #2196f3;
+  color: var(--dark-color);
+  border-bottom-color: var(--dark-color);
   font-weight: bold;
 }
 

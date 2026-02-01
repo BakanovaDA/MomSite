@@ -20,6 +20,7 @@ const ChildrenAchievsTab = () => {
           src={`${_API_}/children-achievs/${filename}`}
           alt="Достижение"
           loading="lazy"  // ← ленивая загрузка для оптимизации
+          style={{ maxWidth: '50vw' }}
         />
       ))}
       

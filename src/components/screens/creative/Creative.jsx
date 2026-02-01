@@ -9,9 +9,10 @@ const Creative = () => {
   return (
     <div className={styles.body} 
         style={{
-          backgroundColor: 'var(--achievements-bg-color)',
-          '--text-color': 'var(--achievements-text-color)',
-          '--shadow-color': 'var(--achievements-shadow-color)'
+          backgroundColor: 'var(--creative-bg-color)',
+          '--text-color': 'var(--creative-text-color)',
+          '--dark-color': 'var(--creative-dark-color)',
+          '--shadow-color': 'var(--creative-shadow-color)'
          }}>
           
       <div className='row'>
@@ -19,7 +20,7 @@ const Creative = () => {
           <Navigation />
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-6 p-0'>
           <Label />
 
           <Post id = 'post3'

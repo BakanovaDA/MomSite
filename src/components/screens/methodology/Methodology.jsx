@@ -26,6 +26,7 @@ const Methodology = () => {
         style={{
           backgroundColor: 'var(--methodology-bg-color)',
           '--text-color': 'var(--methodology-text-color)',
+          '--dark-color': 'var(--methodology-dark-color)',
           '--shadow-color': 'var(--methodology-shadow-color)'
          }}>
 
@@ -50,7 +51,7 @@ const Methodology = () => {
           <Navigation />
         </div>
 
-        <div className='col-md-6'>
+        <div className='col-md-6 p-0'>
 
           <Label />
 

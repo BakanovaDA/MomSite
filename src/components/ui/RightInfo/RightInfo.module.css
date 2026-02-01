@@ -11,7 +11,10 @@
 /* Навигация по странице */
 .info {
   position: sticky;
-    top: 30px;
+  top: 30px;
+    display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); 
 }
 
 .info p {
@@ -46,10 +49,6 @@
   transform: translateX(4px);
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
 }
-/* 
-.info a:active {
-  background: var(--text-color);
-} */
 
 /* Декоративный элемент для правой колонки */
 .rightColumn::before {
@@ -60,6 +59,27 @@
   height: 100%;
   width: 4px;
   opacity: 0.1;
+}
+
+.linksContainer {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.linksContainer::-webkit-scrollbar {
+  width: 4px;
+}
+
+.linksContainer::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+}
+
+.linksContainer::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  opacity: 0.3;
+  border-radius: 2px;
 }
 
 /* Адаптивность */

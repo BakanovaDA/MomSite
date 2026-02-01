@@ -25,6 +25,7 @@ const Achievs = () => {
         style={{
           backgroundColor: 'var(--achievements-bg-color)',
           '--text-color': 'var(--achievements-text-color)',
+          '--dark-color': 'var(--achievements-dark-color)',
           '--shadow-color': 'var(--achievements-shadow-color)'
          }}>
 
