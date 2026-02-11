@@ -1,3 +1,3 @@
 # Сайт-визитка для воспитателя детского сада
 
-URL: http://bakanova-dou.ru
+URL: http://bakanova-dou.ru/
