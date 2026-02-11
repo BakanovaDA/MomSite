@@ -1,5 +1,7 @@
 import styles from './Creative.module.css'
 import Navigation from '../../ui/Navigation/Navigation'
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+import { checkIsMobile } from '../../../utils/isMobile'
 import RightInfo from '../../ui/RightInfo/RightInfo'
 import Label from '../../ui/Label/Label'
 import Post from '../../ui/Post/Post'
@@ -16,11 +18,17 @@ const Creative = () => {
          }}>
           
       <div className='row'>
-        <div className='col-md-3'>
-          <Navigation />
-        </div>
+
+        {checkIsMobile() ? (
+          <BurgerMenu />
+        ) : (
+          <div className='col-md-3'>
+            <Navigation />
+          </div>
+        )}
 
         <div className='col-md-6 p-0'>
+
           <Label />
 
           <Post id = 'post3'

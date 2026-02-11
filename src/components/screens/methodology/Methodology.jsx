@@ -1,5 +1,7 @@
 import styles from './Methodology.module.css'
 import Navigation from '../../ui/Navigation/Navigation'
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+import { checkIsMobile } from '../../../utils/isMobile'
 import RightInfo from '../../ui/RightInfo/RightInfo'
 import Label from '../../ui/Label/Label'
 import TabSwitch from '../../ui/TabSwitch/TabSwitch'
@@ -29,27 +31,16 @@ const Methodology = () => {
           '--dark-color': 'var(--methodology-dark-color)',
           '--shadow-color': 'var(--methodology-shadow-color)'
          }}>
-
-      {/* Мобильное меню (только для маленьких экранов) */}
-      <div className='d-block d-md-none'>
-        <button 
-          className={styles.mobileMenuButton}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          ☰ Меню
-        </button>
-        {/* {isMobileMenuOpen && (
-          <div className={styles.mobileMenu}>
-            <Navigation />
-          </div>
-        )} */}
-      </div>
       
       <div className='row'>
-
-        <div className='col-md-3 d-none d-md-block'>
-          <Navigation />
-        </div>
+        
+        {checkIsMobile() ? (
+          <BurgerMenu />
+        ) : (
+          <div className='col-md-3'>
+            <Navigation />
+          </div>
+        )}
 
         <div className='col-md-6 p-0'>
 

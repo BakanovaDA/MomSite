@@ -2,7 +2,6 @@
   position: fixed;
   top: 50%;
   left: 12.5%;
-  /* left: calc((100% - min(100%, 1920px)) / 2 + (25% / 2)); */
   transform: translate(-50%, -50%);
   width: min(80%, 250px);
 }

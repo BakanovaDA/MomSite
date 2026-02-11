@@ -1,5 +1,7 @@
 import styles from './Pedagogy.module.css'
 import Navigation from '../../ui/Navigation/Navigation'
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+import { checkIsMobile } from '../../../utils/isMobile'
 import RightInfo from '../../ui/RightInfo/RightInfo'
 import Label from '../../ui/Label/Label'
 import TabSwitch from '../../ui/TabSwitch/TabSwitch'
@@ -32,9 +34,13 @@ const Pedagogy = () => {
     
       <div className='row'>
 
-        <div className='col-md-3'>
-          <Navigation />
-        </div>
+        {checkIsMobile() ? (
+          <BurgerMenu />
+        ) : (
+          <div className='col-md-3'>
+            <Navigation />
+          </div>
+        )}
 
         <div className='col-md-6 p-0'>
           <Label />

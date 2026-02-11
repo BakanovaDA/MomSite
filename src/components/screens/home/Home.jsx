@@ -1,70 +1,23 @@
 import styles from './Home.module.css'
 import Navigation from '../../ui/Navigation/Navigation'
+import BurgerMenu from '../../ui/BurgerMenu/BurgerMenu'
+import { checkIsMobile } from '../../../utils/isMobile'
+import { calculateAge } from '../../../utils/ageUtils'
 
 function App() {
 
-  function calculateAge(birthYear, birthMonth = null, birthDay = null) {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth() + 1;
-    const currentDay = currentDate.getDate();
-
-    let age = currentYear - birthYear;
-
-    if (birthMonth !== null && birthDay !== null) {
-        if (currentMonth < birthMonth || 
-            (currentMonth === birthMonth && currentDay < birthDay)) {
-            age--;
-        }
-    }
-
-    return `${age} ${getYearWord(age)}`;
-  }
-
-  function getYearWord(years) {
-    const lastDigit = years % 10;
-    const lastTwoDigits = years % 100;
-
-    if (lastTwoDigits >= 11 && lastTwoDigits <= 19) {
-        return 'лет';
-    }
-    
-    if (lastDigit === 1) {
-        return 'год';
-    }
-    
-    if (lastDigit >= 2 && lastDigit <= 4) {
-        return 'года';
-    }
-    
-    return 'лет';
-  }
-
-
   return (
-
     <div className={styles.body}>
-
-      {/* Мобильное меню (только для маленьких экранов) */}
-      <div className='d-block d-md-none'>
-        <button 
-          className={styles.burgerMenu}
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          ☰
-        </button>
-        {/* {isMobileMenuOpen && (
-          <div className={styles.mobileMenu}>
-            <Navigation />
-          </div>
-        )} */}
-      </div>
 
       <div className='row'>
 
-        <div className='col-md-3 d-none d-md-block'>
-          <Navigation />
-        </div>
+        {checkIsMobile() ? (
+          <BurgerMenu />
+        ) : (
+          <div className='col-md-3'>
+            <Navigation />
+          </div>
+        )}
       
         <div className='col-md-5'>
           
@@ -76,6 +29,7 @@ function App() {
               <div className={styles.infoItem}>
                 <span className={styles.label}>Место работы:</span>
                 <span className={styles.value}>г. Оренбург, МДОАУ "Детский сад №37"</span>
+                <span className={styles.value}><a>https://ds37-orenburg-r56.gosweb.gosuslugi.ru/</a></span>
               </div>
               
               <div className={styles.infoItem}>
@@ -84,13 +38,8 @@ function App() {
               </div>
               
               <div className={styles.infoItem}>
-                <span className={styles.label}>Возраст:</span>
-                <span className={styles.value}>{calculateAge(1977, 12, 10)}</span>
-              </div>
-              
-              <div className={styles.infoItem}>
                 <span className={styles.label}>Дата рождения:</span>
-                <span className={styles.value}>10 декабря 1977 ({calculateAge(1977, 12, 10)})</span>
+                <span className={styles.value}>10 декабря 1977, {calculateAge(1977, 12, 10)}</span>
               </div>
               
               <div className={styles.infoItem}>
@@ -130,7 +79,7 @@ function App() {
           </blockquote>
           
         </div>
-        
+
         <div className='col-md-4'>
           <div className={styles.profile}>
             <div className={styles.fio}>
