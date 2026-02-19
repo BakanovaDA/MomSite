@@ -7,6 +7,7 @@ import Label from '../../ui/Label/Label'
 import TabSwitch from '../../ui/TabSwitch/TabSwitch'
 import ChildInteractionTab from './tabs/ChildInteractionTab.jsx'
 import ParentInteractionTab from './tabs/ParentInteractionTab.jsx'
+import DiagramTab from './tabs/DiagramTab.jsx'
 
 const Pedagogy = () => {
 
@@ -19,6 +20,10 @@ const Pedagogy = () => {
     parent: {
       label: 'Работа с родителями', 
       content: <ParentInteractionTab />
+    },
+    diagram: {
+      label: 'Результаты освоения воспитанниками ОП ДО', 
+      content: <DiagramTab />
     }
   }
 

@@ -28,8 +28,19 @@ function App() {
             <div className={styles.infoGrid}>
               <div className={styles.infoItem}>
                 <span className={styles.label}>Место работы:</span>
-                <span className={styles.value}>г. Оренбург, МДОАУ "Детский сад №37"</span>
-                <span className={styles.value}><a>https://ds37-orenburg-r56.gosweb.gosuslugi.ru/</a></span>
+                <span className={styles.value}>г. Оренбург, МДОАУ "Детский сад №37"
+                  <br/>
+                  <a href="https://ds37-orenburg-r56.gosweb.gosuslugi.ru/" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     style={{
+                        color: '#2196F3',
+                        textDecoration: 'underline',
+                        fontWeight: 500
+                      }}>
+                    сайт учреждения
+                  </a>
+                </span>
               </div>
               
               <div className={styles.infoItem}>
@@ -53,7 +64,7 @@ function App() {
               </div>
               
               <div className={styles.infoItem}>
-                <span className={styles.label}>Стаж<br/>работы:</span>
+                <span className={styles.label}>Стаж работы:</span>
                 <span className={styles.value}>{calculateAge(2000)}</span>
               </div>
               
@@ -71,6 +82,11 @@ function App() {
                 <span className={styles.label}>Увлечения:</span>
                 <span className={styles.value}>лыжи, цветоводство, путешествия</span>
               </div>
+
+              <div className={styles.infoItem}>
+                <span className={styles.label}>Эл. почта:</span>
+                <span className={styles.value}>lblm-mb@mail.ru</span>
+              </div>
             </div>
           </div>
 
@@ -86,6 +102,10 @@ function App() {
               <h1>Баканова</h1>
               <h2>Любовь Михайловна</h2>
             </div>
+            {/* <div className={styles.fioMobile}>
+              <h1>Баканова</h1>
+              <h2>Любовь Михайловна</h2>
+            </div> */}
           </div>
         </div>
         

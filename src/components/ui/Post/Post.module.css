@@ -6,6 +6,7 @@
   box-shadow: 10px 10px 20px 0px  var(--shadow-color);
   text-align: center;
   font: 15px;
+  max-width: calc(100%);
 }
 .post > img {
   border-radius: 15px;

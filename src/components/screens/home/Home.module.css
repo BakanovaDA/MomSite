@@ -35,16 +35,13 @@
 
 .item {
   border-radius: 30px;
-  /* background-color: white; */
   opacity: 0.4;
   color: black;
   padding: 15px;
   font-size: 16px;
-  /* background-color: #FF5F6D; */
 }
 
 .item {
-  /* background: #fff; */
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -91,70 +88,123 @@
 
 
 @media (max-width: 480px) {
+  /* ===== СБРОС СЕТКИ ===== */
+  .row {
+    display: block !important;  /* Убираем flex сетку */
+    /* margin: 0 !important; */
+    /* width: 100% !important; */
+  }
+  
+  .row > [class*="col-"] {
+    /* width: 100% !important; */
+    /* max-width: 100% !important; */
+    padding: 0 !important;
+    /* margin: 0 0 20px 0 !important; */
+    flex: none !important;
+  }
 
+
+  /* 2. Блок с профилем (был последним) - СТАВИМ ПЕРВЫМ */
+  .row > [class*="col-"]:last-child {
+    /* display: block !important; */
+    order: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* 3. Блок с карточкой и цитатой (был вторым) */
+  .row > [class*="col-"]:nth-child(2) {
+    display: block !important;
+    order: 1 !important;
+  }
+
+  /* ===== ПРОФИЛЬ ===== */
   .profile {
-    /* float: right !important; */
+    /* position: relative !important; */
+    width: 200px   !important;
+    height: 200px !important;
     background-image: url('/mainMini.jpg');
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 5%;
-    margin: 20px;
-    padding: 20px;
-  }
-  .fio {
-    margin: 0px 0px 0px 165px;
-    color:black;
-    position: relative;
-  }
-  .img {
-    width: 20vh;
-  }
-  /* Карточка с информацией - ПОСЛЕ ФОТО */
-  .item {
-    order: 2 !important; /* Ставим вторым */
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 10px !important;
     margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .fio {
+    position: absolute !important;
+    bottom: 15px !important;
+    left: 15px !important;
+    margin: 0px 0px -15px -200px;
+    color: rgb(190, 76, 76) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+    text-align: right;
+  }
+
+  .fio h1 {
+    font-size: 24px !important;
+    margin: 0 !important;
+  }
+
+  .fio h2 {
+    font-size: 18px !important;
+    margin: 0px 0 0 0 !important;
+  }
+
+  /* ===== КАРТОЧКА ===== */
+  .item {
+    margin: 200px 0 20px 0 !important;
+    padding: 20px 15px !important;
     width: 100% !important;
-    max-width: 100%  !important;
+    max-width: 100% !important;
     opacity: 1 !important;
     color: #FF5F6D !important;
-    padding: 20px 15px !important;
-    font-size: 16px !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     background: none !important;
   }
-    
+
   .title {
-    margin-top: 20px !important; /* Уменьшили отступ так как фото теперь сверху */
+    margin: 0 0 20px 0 !important;
     font-size: 1.2rem !important;
     border-bottom: 1px solid #3498db !important;
+    text-align: center !important;
   }
 
   .infoGrid {
+    display: flex !important;
+    flex-direction: column !important;
     gap: 0.5rem !important;
   }
-  
+
   .infoItem {
+    display: flex !important;
     flex-direction: column !important;
     gap: 0.25rem !important;
     padding: 10px 0 !important;
     border-bottom: 1px solid #eee !important;
   }
-  
+
   .label {
-    min-width: auto !important;
+    /* min-width: auto !important; */
     font-weight: 600 !important;
     padding-right: 0 !important;
     color: #333 !important;
     font-size: 14px !important;
   }
-  
+
   .value {
     width: 100% !important;
     color: #666 !important;
     font-size: 16px !important;
     line-height: 1.4 !important;
+  }
+
+  /* ===== ЦИТАТА ===== */
+  .quote {
+    margin: 0 !important;
+    padding: 15px !important;
+    font-size: 16px !important;
+    text-align: center !important;
   }
   
 }
