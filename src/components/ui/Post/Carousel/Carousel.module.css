@@ -17,7 +17,6 @@
   object-fit: contain;
   display: block;
   border-radius: 15px;
-  /* margin: auto; */
   padding: 0px 50px;
 }
 
@@ -61,7 +60,7 @@
 }
 
 .carouselBtn:hover {
-  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
 }
 
 .carouselBtnPrev {
@@ -99,7 +98,7 @@
 
 @media (max-width: 480px) {
   .carouselSlides {
-    height: 50vw;
+    height: 70vw;
   }
 }
 
