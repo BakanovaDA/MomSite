@@ -3,16 +3,14 @@
 .rightColumn {
   min-height: 100vh;
   height: 100%;
-  padding: 30px 20px;
-  /* padding: 30px 50px; */
-  position: relative;
+  padding: 30px 30px;
 }
 
 /* Навигация по странице */
 .info {
   position: sticky;
   top: 30px;
-    display: flex;
+  display: flex;
   flex-direction: column;
   height: calc(100vh - 60px); 
 }
@@ -50,17 +48,6 @@
   box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
 }
 
-/* Декоративный элемент для правой колонки */
-.rightColumn::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 4px;
-  opacity: 0.1;
-}
-
 .linksContainer {
   flex: 1;
   overflow-y: auto;
@@ -89,6 +76,8 @@
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.04);
     margin-top: 30px;
     padding: 25px 20px;
+    position: relative;
+    height: 100vh;
   }
   
   .info {

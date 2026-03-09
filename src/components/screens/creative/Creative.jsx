@@ -42,7 +42,7 @@ const Creative = () => {
           </div>
         )}
 
-        <div className='col-md-6 p-0'>
+        <div className='col-md-6'>
 
           <Label />
 

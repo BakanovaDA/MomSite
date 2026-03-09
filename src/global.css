@@ -1,7 +1,5 @@
 
 body {  
-  /* max-width: 1920px; */
-  /* margin: auto; */
   font: 14px/1.5em "Lucida Grande",Arial,sans-serif;
 }
 
@@ -15,15 +13,17 @@ a {
   color: black;
 }
 
+#root > div {
+  /* Отключаем padding от Bootstrap */
+  /* Костыль! Так как .body сжирается минификацией, то пишем как #root > div */
+  padding: 0px 15px;
+}
+
 @media (max-width: 480px) {
   .row,
   .row > * {
-    margin: 0 !important;
-    --bs-gutter-x: 0 !important;
-    --bs-gutter-y: 0 !important;
-  }
-  #root > div {   
-    /* Костыль! Так как .body сжирается минификацией, то пишем как #root > div */
-    padding: 10px;
+    margin: 0;
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
   }
 }

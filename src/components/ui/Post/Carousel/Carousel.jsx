@@ -27,23 +27,12 @@ const Carousel = ({ images }) => {
       
       <div className={styles.carouselSlides}>
         {images.map((image, index) => (
-          // <div
-          //   key={index}
-          //   className={`${styles.carouselSlide} ${
-          //     index === currentIndex ? styles.carouselSlideActive : ''
-          //   }`}
-          //   style={{ backgroundImage: `url(${image})` }}
-          // />
-
-
           <div
             key={index}
             className={`${styles.carouselSlide} ${
               index === currentIndex ? styles.carouselSlideActive : ''
             }`}
           >
-            {/* 🔴 УБРАЛ: style={{ backgroundImage: `url(${image})` }} */}
-            {/* 🔴 ДОБАВИЛ: */}
             <img 
               src={image} 
               alt={`Slide ${index + 1}`}
@@ -51,9 +40,6 @@ const Carousel = ({ images }) => {
               loading="lazy"
             />
           </div>
-
-
-
         ))}
       </div>
 
@@ -83,46 +69,3 @@ const Carousel = ({ images }) => {
 };
 
 export default Carousel
-
-  // const handleImageChange = (offset, slide) => {
-  //   const activeSlide = document.querySelector('[data-active]')
-  //   const slides = [...document.getElementsByClassName(`${slide}`)]
-
-  //   document.query
-
-  //   const currentIndex = slides.indexOf(activeSlide)
-
-  //   let newIndex = currentIndex + offset
-  
-  //   if (newIndex < 0) newIndex = slides.length - 1
-  //   if (newIndex >= slides.length) newIndex = 0
-  
-  //   slides[newIndex].dataset.active = true
-  //   delete activeSlide.dataset.active
-  // }
-
-  // // const onNext = (slide) => handleImageChange(1, slide)
-  // // const onPrev = (slide) => handleImageChange(-1, slide)
-
-  // const onNext = () => handleImageChange(1, styles.slide)
-  // const onPrev = () => handleImageChange(-1, styles.slide)
-
-  // const onNext2 = () => handleImageChange(1, styles.slide2)
-  // const onPrev2 = () => handleImageChange(-1, styles.slide2)
-
-              // <div className={styles.carousel}>
-              //   <button className={styles.btn} id={styles.next} onClick={onNext2}>&#187;</button>
-              //   <button className={styles.btn} id={styles.prev} onClick={onPrev2}>&#171;</button>
-              //   <ul className={styles.slides}>
-              //     <li className={styles.slide2} data-active>
-              //       <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/1.jpg)' }}/>
-              //     </li>
-              //     <li className={styles.slide2}>
-              //       <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/2.jpeg)' }}/>
-              //     </li>
-              //     <li className={styles.slide2}>
-              //       <div className={styles.img} style={{ backgroundImage: 'url(/MomSite/pdd/3.jpeg)' }}/>
-              //     </li>
-              //   </ul>
-              // </div>
-  
