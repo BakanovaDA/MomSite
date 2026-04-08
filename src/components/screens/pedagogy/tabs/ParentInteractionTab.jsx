@@ -5,6 +5,19 @@ const ParentInteractionTab = () => {
   return (
     <div>
 
+      <Post id = 'post5'
+        title='Оказание первой помощи, терпящим бедствие на воде'
+        date='1 марта 2026'
+        images={[
+          '1.jpeg',
+          '2.jpeg',
+          '3.jpeg',
+          '4.jpeg',
+          '5.jpeg',
+        ]}
+        bucket='pedagogy'
+      />
+
       <Post id = 'post4'
         title='Всеобуч "Патриотическое воспитание"'
         date='февраль 2023'
@@ -25,9 +38,9 @@ const ParentInteractionTab = () => {
         title='Всеобуч "ПДД"'
         date='26 января 2024'
         images={[
-          "ПДД (1).jpg",
-          "ПДД (2).jpeg",
-          "ПДД (3).jpeg"
+          'ПДД (1).jpg',
+          'ПДД (2).jpeg',
+          'ПДД (3).jpeg'
         ]}
         files={[
           {

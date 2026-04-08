@@ -85,7 +85,7 @@ function App() {
 
               <div className={styles.infoItem}>
                 <span className={styles.label}>Эл. почта:</span>
-                <span className={styles.value}>lblm-mb@mail.ru</span>
+                <span className={styles.value}>lmbl-mb@mail.ru</span>
               </div>
             </div>
           </div>
