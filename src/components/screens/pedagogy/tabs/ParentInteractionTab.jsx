@@ -5,6 +5,22 @@ const ParentInteractionTab = () => {
   return (
     <div>
 
+      <Post id = 'post6'
+        title='Эксперимент в жизни ребенка'
+        date='5 мая 2026'
+        images={[
+          '001.jpg',
+          '002.jpg',
+          '003.jpg',
+          '004.jpg',
+          '005.jpg',
+          '006.jpg',
+          '007.jpg',
+          '008.jpg',
+        ]}
+        bucket='pedagogy'
+      />
+
       <Post id = 'post5'
         title='Оказание первой помощи, терпящим бедствие на воде'
         date='1 марта 2026'
